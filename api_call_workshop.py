@@ -102,6 +102,7 @@ if __name__ == "__main__":
 
     # Get the current date
     date = datetime.now().strftime('%Y-%m-%d')
+    # date = (datetime.now() + pd.DateOffset(days=1)).strftime('%Y-%m-%d')
 
     # Loop through each station data and get prices
     for station in station_data:
@@ -115,7 +116,7 @@ if __name__ == "__main__":
 
     # Create a DataFrame with the new data
     new_df = pd.DataFrame(data)
-    print(new_df)
+    # print(new_df)
     # Filepath to the CSV file
     file_path = 'gas_prices.csv'
 
@@ -227,7 +228,7 @@ if __name__ == "__main__":
         print("Email sent successfully.")
 
     # Recipients list
-    recipients = ['coleodegardm@gmail.com', 'm_odegard@yahoo.com', 'lknudsen1234@yahoo.com', 'nerosnesdunk@yahoo.com']#, 'baodegard@yahoo.com']  # Replace with your recipient list
+    recipients = ['coleodegardm@gmail.com']#, 'm_odegard@yahoo.com', 'lknudsen1234@yahoo.com', 'nerosnesdunk@yahoo.com']#, 'baodegard@yahoo.com']  # Replace with your recipient list
 
     # Send email with the formatted data
     send_email(

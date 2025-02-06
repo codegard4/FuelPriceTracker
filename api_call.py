@@ -155,7 +155,7 @@ if __name__ == "__main__":
     day_df = filter_for_day(file_path, target_date)
 
     if day_df is not None and not day_df.empty:
-        print("Filtered data for the target date:")
+        print(f"Filtered data for the target date: {target_date}")
         # print(day_df)
     else:
         print("No data available for the target date.")
@@ -187,8 +187,8 @@ if __name__ == "__main__":
 
     if day_df is not None and not day_df.empty:
         email_body = format_data_as_text(day_df)
-        print("Formatted data for email:")
-        print(email_body)
+        # print("Formatted data for email:")
+        # print(email_body)
     else:
         email_body = "No data available for the target date."
 
