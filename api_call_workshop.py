@@ -189,7 +189,7 @@ if __name__ == "__main__":
     if day_df is not None and not day_df.empty:
         email_body = format_data_as_text(day_df)
         print("Formatted data for email:")
-        print(email_body)
+        # print(email_body)
     else:
         email_body = "No data available for the target date."
 
