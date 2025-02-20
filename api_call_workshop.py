@@ -231,11 +231,11 @@ if __name__ == "__main__":
     recipients = ['coleodegardm@gmail.com']#, 'm_odegard@yahoo.com', 'lknudsen1234@yahoo.com', 'nerosnesdunk@yahoo.com']#, 'baodegard@yahoo.com']  # Replace with your recipient list
 
     # Send email with the formatted data
-    send_email(
-        subject=f"Cash & Credit Gas Prices for {target_date}",
-        body=email_body,
-        to_emails=recipients
-    )
+    # send_email(
+    #     subject=f"Cash & Credit Gas Prices for {target_date}",
+    #     body=email_body,
+    #     to_emails=recipients
+    # )
 
 
 
