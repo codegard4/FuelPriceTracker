@@ -99,3 +99,13 @@ regular,midgrade,premium,cash_price,date,station_nickname,location
 3.61,3.91,4.21,---,2025-03-01,Fred Meyer,Scappoose
 3.99,- - -,- - -,---,2025-03-01,76,Scappoose
 - - -,- - -,- - -,---,2025-03-01,Shell,Scappoose
+3.85,4.05,4.25,3.65,2025-03-02,Fastrak,Broadway
+3.95,- - -,- - -,3.45,2025-03-02,Fastrak Fremont,Broadway
+3.99,4.21,4.43,---,2025-03-02,Shell 33rd,Broadway
+3.54,3.84,4.24,3.44,2025-03-02,Fastrak,Milwaukie
+- - -,- - -,- - -,---,2025-03-02,Safeway,Milwaukie
+- - -,- - -,- - -,---,2025-03-02,SpaceAge,Milwaukie
+3.63,- - -,4.59,3.53,2025-03-02,Roadrunner,Scappoose
+3.61,3.91,4.21,---,2025-03-02,Fred Meyer,Scappoose
+- - -,- - -,- - -,---,2025-03-02,76,Scappoose
+- - -,- - -,- - -,---,2025-03-02,Shell,Scappoose
