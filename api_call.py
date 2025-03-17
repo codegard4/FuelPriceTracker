@@ -88,6 +88,7 @@ if __name__ == "__main__":
         {'url': 'https://www.gasbuddy.com/station/41005', 'nickname': 'Fastrak', 'location': 'Milwaukie'},
         {'url': 'https://www.gasbuddy.com/station/76591', 'nickname': 'Safeway', 'location': 'Milwaukie'},
         {'url': 'https://www.gasbuddy.com/station/80434', 'nickname': 'SpaceAge', 'location': 'Milwaukie'},
+        {'url': 'https://www.gasbuddy.com/station/97767', 'nickname': 'Astro', 'location': 'Milwaukie'},
 
         {'url': 'https://www.gasbuddy.com/station/10847', 'nickname': 'Roadrunner', 'location': 'Scappoose'},
         {'url': 'https://www.gasbuddy.com/station/14297', 'nickname': 'Fred Meyer', 'location': 'Scappoose'},
@@ -115,7 +116,7 @@ if __name__ == "__main__":
 
     # Create a DataFrame with the new data
     new_df = pd.DataFrame(data)
-    print(new_df)
+    # print(new_df)
     # Filepath to the CSV file
     file_path = 'gas_prices.csv'
 
@@ -131,6 +132,7 @@ if __name__ == "__main__":
 
 
     # Function to filter gas prices for a specific day
+    #NOTE--if the script is run more than once then we will have more than 1 entry for each station for the same day
     def filter_for_day(file_path, target_date):
         if not os.path.exists(file_path):
             print(f"No data file found at {file_path}")
@@ -156,7 +158,7 @@ if __name__ == "__main__":
 
     if day_df is not None and not day_df.empty:
         print(f"Filtered data for the target date: {target_date}")
-        # print(day_df)
+        print(day_df)
     else:
         print("No data available for the target date.")
 
@@ -165,6 +167,7 @@ if __name__ == "__main__":
     def format_data_as_text(df):
         text = f"Gas Prices for {target_date}:\n *Regular Prices Only"
         curr_location = ""
+        print(df)
         for index, row in df.iterrows():
             if curr_location != row['location']:
                 curr_location = row['location']
@@ -185,8 +188,8 @@ if __name__ == "__main__":
         return text
 
 
-    if day_df is not None and not day_df.empty:
-        email_body = format_data_as_text(day_df)
+    if new_df is not None and not new_df.empty:
+        email_body = format_data_as_text(new_df) #new_df is created every time the script is run, so it will always be the most recent data
         # print("Formatted data for email:")
         # print(email_body)
     else:
@@ -227,7 +230,7 @@ if __name__ == "__main__":
         print("Email sent successfully.")
 
     # Recipients list
-    recipients = ['coleodegardm@gmail.com', 'm_odegard@yahoo.com', 'lknudsen1234@yahoo.com', 'nerosnesdunk@yahoo.com']#, 'baodegard@yahoo.com']  # Replace with your recipient list
+    recipients = ['coleodegardm@gmail.com', 'm_odegard@yahoo.com', 'lknudsen1234@yahoo.com', 'nerosnesdunk@yahoo.com', 'baodegard@yahoo.com']  # Replace with your recipient list
 
     # Send email with the formatted data
     send_email(

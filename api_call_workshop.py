@@ -88,6 +88,7 @@ if __name__ == "__main__":
         {'url': 'https://www.gasbuddy.com/station/41005', 'nickname': 'Fastrak', 'location': 'Milwaukie'},
         {'url': 'https://www.gasbuddy.com/station/76591', 'nickname': 'Safeway', 'location': 'Milwaukie'},
         {'url': 'https://www.gasbuddy.com/station/80434', 'nickname': 'SpaceAge', 'location': 'Milwaukie'},
+        {'url': 'https://www.gasbuddy.com/station/97767', 'nickname': 'Astro', 'location': 'Milwaukie'},
 
         {'url': 'https://www.gasbuddy.com/station/10847', 'nickname': 'Roadrunner', 'location': 'Scappoose'},
         {'url': 'https://www.gasbuddy.com/station/14297', 'nickname': 'Fred Meyer', 'location': 'Scappoose'},
