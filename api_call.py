@@ -8,14 +8,18 @@ import re
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import configparser
 
 if __name__ == "__main__":
 
+    # Load email credentials from config file
+    config = configparser.ConfigParser()
+   
+    config.read('./config/params.conf')
+
     def get_cash_prices(url):
         # print("NEW STATION")
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-        }
+        headers = json.loads(config.get('DEFAULT', 'header'))
 
         response = requests.get(url, headers=headers)
         soup = BeautifulSoup(response.content, 'html.parser')
@@ -53,9 +57,8 @@ if __name__ == "__main__":
 
     # Function to get gas prices from a GasBuddy station URL
     def get_gas_prices(url):
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-        }
+        headers = json.loads(config.get('DEFAULT', 'header'))
+        # headers = {'User Agent': config['DEFAULT']['header'].strip('"')}
         response = requests.get(url, headers=headers)
         if response.status_code == 403:
             print(f"Access forbidden for URL: {url}")
@@ -80,7 +83,7 @@ if __name__ == "__main__":
 
 
     # List of GasBuddy station URLs and corresponding nicknames
-    station_data = [
+    station_data = [ 
         {'url': 'https://www.gasbuddy.com/station/72802', 'nickname': 'Fastrak', 'location': 'Broadway'},
         {'url': 'https://www.gasbuddy.com/station/105460', 'nickname': 'Fastrak Fremont', 'location': 'Broadway'},
         {'url': 'https://www.gasbuddy.com/station/29803', 'nickname': 'Shell 33rd', 'location': 'Broadway'},
@@ -94,9 +97,9 @@ if __name__ == "__main__":
         {'url': 'https://www.gasbuddy.com/station/14297', 'nickname': 'Fred Meyer', 'location': 'Scappoose'},
         {'url': 'https://www.gasbuddy.com/station/32005', 'nickname': '76', 'location': 'Scappoose'},
         {'url': 'https://www.gasbuddy.com/station/32007', 'nickname': 'Shell', 'location': 'Scappoose'}
+        ]
 
-        # Add more station data as needed
-    ]
+        # Add more station data as needed]
 
     # List to hold all data
     data = []
@@ -199,12 +202,12 @@ if __name__ == "__main__":
     # Function to send email
     def send_email(subject, body, to_emails):
         # Email credentials
-        smtp_server = 'smtp.gmail.com'  # Replace with your SMTP server
-        smtp_port = 587  # Replace with your SMTP port (usually 587 for TLS)
-        smtp_user = 'coleodegardm@gmail.com'  # Replace with your email address
-        smtp_password = 'rdoo abhb ntta yrek'  # Replace with your email password
+        smtp_server = config['DEFAULT']['server'] # Replace with your SMTP server
+        smtp_port = int(config['DEFAULT']['port'])  # Replace with your SMTP port (usually 587 for TLS)
+        smtp_user = config['DEFAULT']['user']  # Replace with your email address
+        smtp_password = config['DEFAULT']['password'].strip("'")  # Replace with your email password
 
-        smtp = smtplib.SMTP('smtp.gmail.com', 587)
+        smtp = smtplib.SMTP(smtp_server, smtp_port)
         smtp.ehlo()
         smtp.starttls()
 
@@ -230,7 +233,7 @@ if __name__ == "__main__":
         print("Email sent successfully.")
 
     # Recipients list
-    recipients = ['coleodegardm@gmail.com', 'm_odegard@yahoo.com', 'lknudsen1234@yahoo.com', 'nerosnesdunk@yahoo.com', 'baodegard@yahoo.com']  # Replace with your recipient list
+    recipients = config['DEFAULT']['emails'].split(",")  # Replace with your recipient list
 
     # Send email with the formatted data
     send_email(

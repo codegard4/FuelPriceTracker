@@ -9,6 +9,13 @@ __pycache__/
 # Python Executable
 *.exe
 
+# Workshop files
+api_call_workshop.py
+gas_buddy_price_scraper.py
+
+#Config files
+config/
+
 # Distribution / packaging
 .Python
 build/
