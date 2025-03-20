@@ -3,6 +3,8 @@
 ## Overview
 This project automates the collection, storage, and reporting of gas price data in Portland OR. It gathers price information from various fuel stations, compiles the data into a CSV file, and sends a daily email summarizing the latest prices. Additionally, a Power BI dashboard visualizes trends across multiple fuel markets.
 
+*NOTE -- the dashboard layout is also viewable in an easier-to-open .png file
+
 ## Features
 - **Automated Data Collection**: Fetches gas prices from GasBuddy stations autonomously via Microsoft Task Scheduler
 - **Daily CSV Logging**: Stores historical price data in `gas_prices.csv`.
