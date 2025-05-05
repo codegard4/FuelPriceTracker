@@ -13,6 +13,7 @@ __pycache__/
 api_call_workshop.py
 daily_email.py
 gas_buddy_price_scraper.py
+analysis.ipynb
 
 #Config files
 config/
