@@ -14,6 +14,8 @@ api_call_workshop.py
 daily_email.py
 gas_buddy_price_scraper.py
 analysis.ipynb
+gb_scrape.py
+scrape_old.py
 
 #Config files
 config/
@@ -34,7 +36,10 @@ var/
 wheels/
 share/python-wheels/
 
-
+# CSV files
+rr_prices.CSV
+ft_prices.CSV
+bw_prices.CSV
 
 # Jupyter Notebook
 .ipynb_checkpoints

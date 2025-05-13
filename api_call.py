@@ -52,8 +52,9 @@ if __name__ == "__main__":
                     # print(cash_price)
 
         # Return cash prices or "---" if none found
-        return cash_price if cash_price else "---"
+        return cash_price if cash_price else "- - -"
 
+    
 
     # Function to get gas prices from a GasBuddy station URL
     def get_gas_prices(url):

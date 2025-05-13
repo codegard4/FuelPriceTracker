@@ -603,14 +603,25 @@ regular,midgrade,premium,cash_price,date,station_nickname,location
 3.81,4.11,- - -,---,2025-05-05,Fred Meyer,Scappoose
 3.99,4.25,4.59,---,2025-05-05,76,Scappoose
 3.95,4.19,4.43,---,2025-05-05,Shell,Scappoose
-- - -,- - -,- - -,---,2025-05-06,Fastrak,Broadway
-4.09,4.69,- - -,3.59,2025-05-06,Fastrak Fremont,Broadway
-4.15,4.37,4.59,---,2025-05-06,Shell 33rd,Broadway
-,,,---,2025-05-06,Fastrak,Milwaukie
-,,,---,2025-05-06,Safeway,Milwaukie
-,,,---,2025-05-06,SpaceAge,Milwaukie
-,,,---,2025-05-06,Astro,Milwaukie
-,,,---,2025-05-06,Roadrunner,Scappoose
-,,,---,2025-05-06,Fred Meyer,Scappoose
-,,,---,2025-05-06,76,Scappoose
-,,,---,2025-05-06,Shell,Scappoose
+- - -,- - -,- - -,---,2025-05-07,Fastrak,Broadway
+4.09,4.69,- - -,3.59,2025-05-07,Fastrak Fremont,Broadway
+4.15,4.37,4.59,---,2025-05-07,Shell 33rd,Broadway
+3.79,4.09,4.49,3.69,2025-05-07,Fastrak,Milwaukie
+3.89,4.25,4.59,3.79,2025-05-07,Safeway,Milwaukie
+,,,---,2025-05-07,SpaceAge,Milwaukie
+,,,---,2025-05-07,Astro,Milwaukie
+,,,---,2025-05-07,Roadrunner,Scappoose
+,,,---,2025-05-07,Fred Meyer,Scappoose
+,,,---,2025-05-07,76,Scappoose
+,,,---,2025-05-07,Shell,Scappoose
+- - -,- - -,- - -,- - -,2025-05-07,Fastrak,Broadway
+4.09,4.69,- - -,3.59,2025-05-07,Fastrak Fremont,Broadway
+4.15,4.37,4.59,- - -,2025-05-07,Shell 33rd,Broadway
+3.79,4.09,4.49,3.69,2025-05-07,Fastrak,Milwaukie
+3.89,4.25,4.59,3.79,2025-05-07,Safeway,Milwaukie
+3.77,4.27,4.57,3.77,2025-05-07,SpaceAge,Milwaukie
+- - -,- - -,- - -,- - -,2025-05-07,Astro,Milwaukie
+3.81,- - -,- - -,3.71,2025-05-07,Roadrunner,Scappoose
+3.81,4.11,4.41,- - -,2025-05-07,Fred Meyer,Scappoose
+3.99,- - -,- - -,- - -,2025-05-07,76,Scappoose
+3.95,4.19,4.43,- - -,2025-05-07,Shell,Scappoose
